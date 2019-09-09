@@ -2,7 +2,7 @@
   "name": "GDPR",
   "version": "1.0",
   "description": "Check if site complies to the GDPR!",
-  "permissions": ["tabs" , "activeTab", "declarativeContent", "storage"],
+  "permissions": ["tabs" , "activeTab", "declarativeContent", "storage","background"],
   "options_page": "options.html",
 
   "background": {

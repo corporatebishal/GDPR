@@ -3,7 +3,12 @@ window.createDiv=function(){
     element.classList.add();
     return element;
   }
-  
+    
+  window.createCircle=function(){
+    var element=document.createElement("div");
+    element.classList.add("circle");
+    return element;
+  }
   window.createSpan=function(){
     var element=document.createElement("span");
     return element;
@@ -46,4 +51,3 @@ window.createDiv=function(){
     var element=document.createElement("br");
     return element;
   }
-  

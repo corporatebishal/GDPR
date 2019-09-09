@@ -35,10 +35,13 @@ var currUrl="about:blank";
 var allUrls;
 var data;
 var headerFlag=0;
+var status=0;
+var domainID,domainName;
+console.log("Pre-Change Status is: "+status);
 chrome.runtime.onInstalled.addListener(function() {
     chrome.tabs.query({'active': true, 'lastFocusedWindow': true}, function (tabs) {
       document.write('<scr'+'ipt type="text/javascript" src="database.json" ></scr'+'ipt>');
-    //   document.write('<scr'+'ipt type="text/javascript" src="displayUi.js" ></scr'+'ipt>');
+      document.write('<scr'+'ipt type="text/javascript" src="popup.js" ></scr'+'ipt>');
       document.write('<scr'+'ipt type="text/javascript" src="jquery.js" ></scr'+'ipt>');
   });
   });
@@ -60,16 +63,20 @@ window.checkURL=function(currUrl){
       success: function(result) {
           for (var i in result) {
               if(currUrl.includes(result[i].domain.mainurl)){
-                  //loadTopBar();
                   chrome.browserAction.setBadgeText({text: "ON"}); 
                   chrome.browserAction.setBadgeBackgroundColor({ color: "GREEN" });
-                  console.log("IF: "+result[i].domain.mainurl);
+                  status=1;
+                  domainID=result[i].id;
+                  domainName=result[i].domain.name;
+                //   console.log("Post-Change Status is: "+status);
+                //   loadTopBar();
                   return;
               }
               else{
                   chrome.browserAction.setBadgeText({text: "OFF"}); 
                   chrome.browserAction.setBadgeBackgroundColor({ color: "RED" });
-                  console.log("ELSE: "+result[i].domain.mainurl);
+                  status=0;
+                  console.log("Post-Change Status is: "+status);
               }
               
           }        
