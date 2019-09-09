@@ -1,0 +1,21 @@
+[{
+    "id":1,
+    "domain":{
+        "mainurl":"google",
+        "alturl":["deakinedge.com.au","deakinmail.com.au"]
+    },
+    "complianceStatus":{
+
+    }
+},
+{
+    "id":2,
+    "domain":{
+        "mainurl":"deakin",
+        "alturl":["deakinedge.com.au","deakinmail.com.au"]
+    },
+    "complianceStatus":{
+
+    }
+}
+]

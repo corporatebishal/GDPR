@@ -19,3 +19,20 @@
 //         {code: 'document.body.style.backgroundColor = "' + color + '";'});
 //   });
 // };
+
+
+console.log("Opened Popup JS");
+var currUrl;
+chrome.tabs.query({'active': true, 'lastFocusedWindow': true}, function (tabs) {
+    currUrl = tabs[0].url;
+    console.log("Current Link: "+currUrl);
+    // $.getJSON( "database.json", function( json ) {
+    //     console.log( "JSON Data received, name is " + json.domain.mainurl);
+    //     if(currUrl.includes(json.domain.mainurl)){
+    //         console.log("Enable it");
+    //     }
+    //     else{
+    //         console.log("Disable it");
+    //     }
+    //   });
+});
