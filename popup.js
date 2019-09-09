@@ -19,3 +19,28 @@
 //         {code: 'document.body.style.backgroundColor = "' + color + '";'});
 //   });
 // };
+
+// console.log("Opened Popup JS");
+// var currUrl;
+// chrome.tabs.query({'active': true, 'lastFocusedWindow': true}, function (tabs) {
+//     currUrl = tabs[0].url;
+//     console.log("Current Link: "+currUrl);
+//     // $.getJSON( "database.json", function( json ) {
+//     //     console.log( "JSON Data received, name is " + json.domain.mainurl);
+//     //     if(currUrl.includes(json.domain.mainurl)){
+//     //         console.log("Enable it");
+//     //     }
+//     //     else{
+//     //         console.log("Disable it");
+//     //     }
+//     //   });
+// });
+var domainID,domainName;
+
+document.addEventListener('DOMContentLoaded', function () {
+    var bg = chrome.extension.getBackgroundPage();
+    domainID = bg.domainID;
+    domainName=bg.domainName;
+    alert(domainName);
+//    alert(domainID);
+ });

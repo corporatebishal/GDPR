@@ -4,22 +4,66 @@ button {
     outline: none;
   }
   body{
-    width:348px;
+    width:500px;
   }
   .titleDiv{
     height: 46px;
-    padding-top: 10px;
-    color: #15c39a;
+    padding-top: 80px;
+    color: rgb(0, 0, 0);
     line-height: 19px;
-    border-bottom:1px dashed gray;
-    position: sticky;
-    top:0;
   }
+  .titleURL{
+      padding-top:30px;
+  }
+  .container{
+    min-height:596px;
+    max-height:596px;
+    padding:0px !important;
+  }
+  .top-container{
+      min-height:200px;
+      max-height:200px;
+      background-color:rgb(192, 192, 192);
+      text-align:center;
+  }
+
+  .body-container{
+      min-height:400px;
+      max-height:400px;
+  }
+
+  .chart-container{
+      min-height:200px;
+      max-height:200px;
+      display: flex;
+      justify-content: center;
+  }
+
+  .chart-inner-container{
+    align-self: center;
+    width:80%;
+    margin:auto;
+  }
+
+  .info-container{
+      min-height:200px;
+      max-height:200px;
+      display: flex;
+      justify-content: center;
+  }
+
+  .info-inner-container{
+    align-self: center;
+    width:80%;
+    margin:auto;
+  }
+
+
   .titleDiv span{
     font-size:24px;
   }
   div{
-      padding:10px !important;
+      padding:0px;
   }
 .individualStatus{
     display:inline-block;
@@ -40,15 +84,15 @@ button {
 }
 .section1{
     max-height:300px;
-    overflow:auto;
+    /* overflow:auto; */
 }
 .section2{
     max-height:300px;
-    overflow:auto;
+    /* overflow:auto; */
 }
 .section3,.section4{
     max-height:100px;
-    overflow:auto;
+    /* overflow:auto; */
 }
 .section4{
     background-color: white;
@@ -73,4 +117,23 @@ button {
 .fdStatus{
     color:green;
     font-weight:700;
+}
+
+.error-text{
+    color:red;
+}
+.chart{
+    width:33%;
+    float:left;
+    margin:auto;
+    display: flex;
+    justify-content: center;
+}
+
+.circle{
+    background-color:#c0c0c0;
+    border-radius:200px;
+    padding:50px;
+    align-self: center;
+    font-size: 0.6rem;
 }

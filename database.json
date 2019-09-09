@@ -1,0 +1,52 @@
+[{
+    "id":1,
+    "domain":{
+        "mainurl":"google",
+        "alturl":["deakinedge.com.au","deakinmail.com.au"],
+        "name": "Google Inc"
+    },
+    "complianceStatus":{
+        "isSafe" : {
+            "dataCollection": "true",
+            "dataProcessing": "true",
+            "dataStorage": "true"
+        },
+        "infoSection": {
+            "collectionStats":{
+                "personalInfo": "yes",
+                "bankingInfo": "yes",
+                "sessionInfo": "yes",
+                "offlineInfo": "yes"
+
+            },
+            "processionInfo":{
+                "personalInfo": "yes",
+                "bankingInfo": "yes",
+                "sessionInfo": "yes",
+                "offlineInfo": "yes"
+            },
+            "storageInfo":{
+                "personalInfo": "yes",
+                "bankingInfo": "yes",
+                "sessionInfo": "yes",
+                "offlineInfo": "yes"
+            }
+        }
+    }
+},
+{
+    "id":2,
+    "domain":{
+        "mainurl":"deakin",
+        "alturl":["deakinedge.com.au","deakinmail.com.au"],
+        "name": "Deakin University"
+    },
+    "complianceStatus":{
+        "isSafe" : {
+            "dataCollection": "true",
+            "dataProcessing": "true",
+            "dataStorage": "false"
+        }
+    }
+}
+]
