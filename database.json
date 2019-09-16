@@ -13,13 +13,12 @@
         },
         "infoSection": {
             "collectionStats":{
-                "personalInfo": "yes",
+                "personalInfo":"yes",
                 "bankingInfo": "yes",
                 "sessionInfo": "yes",
                 "offlineInfo": "yes"
-
             },
-            "processionInfo":{
+            "processingInfo":{
                 "personalInfo": "yes",
                 "bankingInfo": "yes",
                 "sessionInfo": "yes",

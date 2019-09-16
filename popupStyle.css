@@ -50,6 +50,7 @@ button {
       max-height:200px;
       display: flex;
       justify-content: center;
+      padding: 20px 0px;
   }
 
   .info-inner-container{
@@ -72,7 +73,7 @@ button {
 .circleGraph{
     border: 4px solid gray;
     border-radius: 1000px;
-    padding: 50px !important;
+    padding: 20px !important;
     display: block;
     width: fit-content;
 }
@@ -122,8 +123,49 @@ button {
 .error-text{
     color:red;
 }
+.safe{
+    color:green;
+    font-weight: 700;
+}
+.warning{
+    color:#c8c841;
+    font-weight: 700;
+}
+.caution{
+    color:red;
+    font-weight: 700;
+}
+.bgSafe{
+    color:black !important;
+    font-weight: 700;
+    background-color: #2d892d;
+}
+.bgWarning{
+    background-color:#c8c841;
+    color:black !important;
+    font-weight: 700;
+}
+.bgCaution{
+    background-color: #cd5656;
+    color:black !important;
+    font-weight: 700;
+}
+.safeIcon{
+    background-image: url(images/safeIcon.png);
+}
+.cautionIcon{
+    background-image: url(images/cautionIcon.png);
+}
+.warningIcon{
+    background-image: url(images/warningIcon.png);
+}
+.statusIcon{
+    width:18px;
+}
+
 .chart{
-    width:33%;
+    /* width:33%; */
+    width:100%;
     float:left;
     margin:auto;
     display: flex;
@@ -136,4 +178,16 @@ button {
     padding:50px;
     align-self: center;
     font-size: 0.6rem;
+}
+
+.info-block{
+    padding:0px 18px 10px 18px;
+    font-size:12px;
+    /* display:none; */
+}
+.info-block {
+    margin-left: 5px;
+}
+.info-title-text{
+    padding-left:5px;
 }

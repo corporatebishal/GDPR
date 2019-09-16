@@ -35,12 +35,34 @@
 //     //     }
 //     //   });
 // });
-var domainID,domainName;
+var domainID,domainName,entireResult;
 
 document.addEventListener('DOMContentLoaded', function () {
     var bg = chrome.extension.getBackgroundPage();
     domainID = bg.domainID;
     domainName=bg.domainName;
-    alert(domainName);
+    entireResult=bg.entireBlockResult;
+    //alert(domainName);
 //    alert(domainID);
  });
+
+
+//  var coll = document.getElementsByClassName("info-section-1");
+//  var i;
+ 
+//  for (i = 0; i < coll.length; i++) {
+//    coll[i].addEventListener("click", function() {
+//      this.classList.toggle("active");
+//      var content = this.nextElementSibling;
+//      if (content.style.maxHeight){
+//        content.style.maxHeight = null;
+//      } else {
+//        content.style.maxHeight = content.scrollHeight + "px";
+//      } 
+//    });
+//  }
+
+//  var classname = document.getElementsByClassName("info-title");
+//  document.getElementsByClassName("info-title")[0].addEventListener("click", function(){
+//     document.getElementsByClassName("info-block").style.display = "block";
+//   });
