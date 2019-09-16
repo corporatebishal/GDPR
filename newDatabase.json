@@ -1,0 +1,165 @@
+[{
+    "id":1,
+    "domain":{
+        "mainurl":"apple",
+        "alturl":["apple.com.au","apple.com"],
+        "name": "Apple"
+    },
+    "companyName": "Apple",
+    "statusCode": "RED",
+    "complianceStatus": 16.63,
+    "complianceDetails": {
+        "identificationDetails": "50",
+        "personalDataObtainedFromOtherSource": "0",
+        "personalDataProcessing": "23.53",
+        "dataTransfers": "0",
+        "rightsAndConsents": "11.11"
+      }
+},
+{
+    "id":2,
+    "domain":{
+        "mainurl":"amazon",
+        "alturl":["amazon.com.au","amazon.com"],
+        "name": "Amazon"
+    },
+    "companyName": "Amazon",
+      "statusCode": "RED",
+      "complianceStatus": 25.48,
+      "complianceDetails": {
+         "identificationDetails": "50",
+         "personalDataObtainedFromOtherSource": "29.17",
+         "personalDataProcessing": "34.88",
+         "dataTransfers": "0",
+         "rightsAndConsents": "3.45"
+      }
+    
+},
+{
+    "id":3,
+    "domain":{
+        "mainurl":"twitter",
+        "alturl":["twitter.com.au","twitter.com"],
+        "name": "Twitter"
+    },
+    "companyName": "Twitter",
+      "statusCode": "YELLOW",
+      "complianceStatus": 44.4,
+      "complianceDetails": {
+         "identificationDetails": "28.57",
+         "personalDataObtainedFromOtherSource": "37.93",
+         "personalDataProcessing": "66.13",
+         "dataTransfers": "0",
+         "rightsAndConsents": "37.50"
+      }
+},
+{
+    "id":4,
+    "domain":{
+        "mainurl":"facebook",
+        "alturl":["fb.me","fb.com"],
+        "name": "Facebook"
+    },
+    "companyName": "Facebook",
+      "statusCode": "RED",
+      "complianceStatus": 19.01,
+      "complianceDetails": {
+         "identificationDetails": "66.67",
+         "personalDataObtainedFromOtherSource": "16.13",
+         "personalDataProcessing": "17.24",
+         "dataTransfers": "0",
+         "rightsAndConsents": "11.11"
+      }
+    
+},
+{
+    "id":5,
+    "domain":{
+        "mainurl":"microsoft",
+        "alturl":["msoft.com.au","microsoft.com"],
+        "name": "Microsoft"
+    },
+    "companyName": "Microsoft",
+      "statusCode": "RED",
+      "complianceStatus": 17.56,
+      "complianceDetails": {
+         "identificationDetails": "25",
+         "personalDataObtainedFromOtherSource": "33.33",
+         "personalDataProcessing": "4",
+         "dataTransfers": "0",
+         "rightsAndConsents": "33.96"
+      }
+},
+{
+    "id":6,
+    "domain":{
+        "mainurl":"whatsapp",
+        "alturl":["whatsapp.com.au","whatsapp.com"],
+        "name": "Whatsapp Inc."
+    },
+    "companyName": "Whatsapp",
+      "statusCode": "YELLOW",
+      "complianceStatus": 50.12,
+      "complianceDetails": {
+         "identificationDetails": "40",
+         "personalDataObtainedFromOtherSource": "17.65",
+         "personalDataProcessing": "74.32",
+         "dataTransfers": "0",
+         "rightsAndConsents": "64.29"
+      }
+},
+{
+    "id":7,
+    "domain":{
+        "mainurl":"skyscanner",
+        "alturl":["skyscanner.com.au"],
+        "name": "Sky Scanner"
+    },
+    "companyName": "Skyscanner",
+      "statusCode": "YELLOW",
+      "complianceStatus": 51.62,
+      "complianceDetails": {
+         "identificationDetails": "20",
+         "personalDataObtainedFromOtherSource": "12.50",
+         "personalDataProcessing": "82.80",
+         "dataTransfers": "0",
+         "rightsAndConsents": "70"
+      }
+},
+{
+    "id":8,
+    "domain":{
+        "mainurl":"google",
+        "alturl":["google.com.au","google.com"],
+        "name": "Google Inc."
+    },
+    "companyName": "Google",
+      "statusCode": "RED",
+      "complianceStatus": 13.68,
+      "complianceDetails": {
+         "identificationDetails": "0",
+         "personalDataObtainedFromOtherSource": "23.81",
+         "personalDataProcessing": "15.39",
+         "dataTransfers": "0",
+         "rightsAndConsents": "13.79"
+      }
+},
+{
+    "id":9,
+    "domain":{
+        "mainurl":"deakin",
+        "alturl":["deakin.com.au","dkin.com"],
+        "name": "Deakin University."
+    },
+    "companyName": "Google",
+      "statusCode": "GREEN",
+      "complianceStatus": 80.68,
+      "complianceDetails": {
+         "identificationDetails": "80",
+         "personalDataObtainedFromOtherSource": "83.81",
+         "personalDataProcessing": "85.39",
+         "dataTransfers": "90",
+         "rightsAndConsents": "93.79"
+      }
+}
+]

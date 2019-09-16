@@ -36,11 +36,11 @@ var allUrls;
 var data;
 var headerFlag=0;
 var status=0;
-var domainID,domainName;
+var domainID,domainName,entireBlockResult;
 console.log("Pre-Change Status is: "+status);
 chrome.runtime.onInstalled.addListener(function() {
     chrome.tabs.query({'active': true, 'lastFocusedWindow': true}, function (tabs) {
-      document.write('<scr'+'ipt type="text/javascript" src="database.json" ></scr'+'ipt>');
+      document.write('<scr'+'ipt type="text/javascript" src="newDatabase.json" ></scr'+'ipt>');
       document.write('<scr'+'ipt type="text/javascript" src="popup.js" ></scr'+'ipt>');
       document.write('<scr'+'ipt type="text/javascript" src="jquery.js" ></scr'+'ipt>');
   });
@@ -48,7 +48,7 @@ chrome.runtime.onInstalled.addListener(function() {
 
 window.loadHeader=function(){
     if(headerFlag==0){
-        document.write('<scr'+'ipt type="text/javascript" src="database.json" ></scr'+'ipt>');
+        document.write('<scr'+'ipt type="text/javascript" src="newDatabase.json" ></scr'+'ipt>');
         // document.write('<scr'+'ipt type="text/javascript" src="displayUi.js" ></scr'+'ipt>');
         document.write('<scr'+'ipt type="text/javascript" src="jquery.js" ></scr'+'ipt>');
         headerFlag=1;
@@ -59,24 +59,54 @@ window.loadHeader=function(){
 window.checkURL=function(currUrl){
     $.ajax({
       type: "GET",
-      url: "database.json", 
+      url: "newDatabase.json", 
       success: function(result) {
           for (var i in result) {
               if(currUrl.includes(result[i].domain.mainurl)){
-                  chrome.browserAction.setBadgeText({text: "ON"}); 
-                  chrome.browserAction.setBadgeBackgroundColor({ color: "GREEN" });
+                  entireBlockResult=result[i];
+                  if(result[i].complianceStatus>=60){
+                    // chrome.browserAction.setBadgeText({text: " "}); 
+                    // chrome.browserAction.setBadgeBackgroundColor({ color: "GREEN" });
+                    chrome.browserAction.setTitle({title :"This site is SAFE"});
+                    chrome.browserAction.setIcon({path: "images/safelogo16.png"});
+
+                  }
+                  else if((result[i].complianceStatus<60)&(result[i].complianceStatus>=40)){
+                    // chrome.browserAction.setBadgeText({text: " "}); 
+                    // chrome.browserAction.setBadgeBackgroundColor({ color: "ORANGE" });
+                    chrome.browserAction.setTitle({title :"This site has WARNINGS. Please click to view possible warnings"});
+                    chrome.browserAction.setIcon({path: "images/warninglogo16.png"});
+
+                  }
+                  else if((result[i].complianceStatus<40)&(result[i].complianceStatus>=0)){
+                    // chrome.browserAction.setBadgeText({text: " "}); 
+                    // chrome.browserAction.setBadgeBackgroundColor({ color: "RED" });
+                    chrome.browserAction.setTitle({title :"Be CAUTIOUS! This site's GDPR is misleading."});
+                    chrome.browserAction.setIcon({path: "images/cautionlogo16.png"});
+
+                  }
+                //   chrome.browserAction.setBadgeText({text: "ON"}); 
+                //   chrome.browserAction.setBadgeBackgroundColor({ color: "GREEN" });
                   status=1;
                   domainID=result[i].id;
                   domainName=result[i].domain.name;
+                  console.log(entireBlockResult);
                 //   console.log("Post-Change Status is: "+status);
                 //   loadTopBar();
                   return;
               }
               else{
-                  chrome.browserAction.setBadgeText({text: "OFF"}); 
-                  chrome.browserAction.setBadgeBackgroundColor({ color: "RED" });
+                //   chrome.browserAction.setBadgeText({text: "OFF"}); 
+                  chrome.browserAction.setBadgeBackgroundColor({ color: "GRAY" });
+                  chrome.browserAction.setIcon({path: "images/logo16.png"});
+                  chrome.browserAction.setTitle({title :"We haven't processed Privacy policy of this website!"});
+
+
                   status=0;
+                  domainID=0;
+                  domainName="N/A";
                   console.log("Post-Change Status is: "+status);
+
               }
               
           }        

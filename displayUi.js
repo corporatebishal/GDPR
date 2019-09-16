@@ -119,19 +119,19 @@ window.loadChart=function(){
 
     var circleInnerText1=createSpan();
     circleInnerText1.classList.add("circle-text");
-    var circleInnerTextMessage1=document.createTextNode("Safe");
+    var circleInnerTextMessage1=document.createTextNode(" ");
     circleInnerText1.appendChild(circleInnerTextMessage1);
     circle1.appendChild(circleInnerText1);
 
     var circleInnerText2=createSpan();
     circleInnerText2.classList.add("circle-text");
-    var circleInnerTextMessage2=document.createTextNode("Safe");
+    var circleInnerTextMessage2=document.createTextNode(" ");
     circleInnerText2.appendChild(circleInnerTextMessage2);
     circle2.appendChild(circleInnerText2);
 
     var circleInnerText3=createSpan();
     circleInnerText3.classList.add("circle-text");
-    var circleInnerTextMessage3=document.createTextNode("Safe");
+    var circleInnerTextMessage3=document.createTextNode(" ");
     circleInnerText3.appendChild(circleInnerTextMessage3);
     circle3.appendChild(circleInnerText3);
 
